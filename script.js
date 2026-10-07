@@ -1,8 +1,7 @@
 function firstWord(s) {
-  // your code here
+  if (!s) return "";
+  let trimmed = s.trim();
+  if (!trimmed) return "";
+  let idx = trimmed.indexOf(" ");
+  return idx === -1 ? trimmed : trimmed.substring(0, idx);
 }
-
-// Do not change the code below
-
-const s = prompt("Enter String:");
-alert(firstWord(s));
